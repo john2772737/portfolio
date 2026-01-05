@@ -4,28 +4,28 @@ import { motion } from "framer-motion";
 function Projects() {
   const projects = [
     {
-      title: "IoT Flood Monitoring System",
-      description: "A data-driven monitoring solution using Node.js and MongoDB to process real-time streams from ESP32 sensors via RESTful APIs.",
-      tech: "Node.js, MongoDB, React, Firebase",
-      link: "#",
+      title: "Baha Alert: IoT Flood Monitoring",
+      description: "Real-time flood detection software utilizing a Fuzzy Logic engine for automated risk assessment. Integrated with Node.js and MongoDB for high-frequency data logging.",
+      tech: "Node.js, MongoDB, React, Firebase, Fuzzy Logic",
+      link: "https://github.com/john2772737/baha-alert",
     },
     {
       title: "DriveMate Automotive Suite",
-      description: "A cross-platform mobile application built with Flutter/Dart featuring a secure Node.js backend for synchronized service management.",
+      description: "Cross-platform automotive service management system. Features a Dart/Flutter mobile client and a Node.js backend to synchronize real-time service requests.",
       tech: "Flutter, Dart, Node.js, REST API",
-      link: "#",
+      link: "https://github.com/john2772737/drivemate",
     },
     {
-      title: "BookLot Inventory System",
-      description: "A full-stack web application for inventory tracking using a centralized Node.js server and scalable MongoDB database schemas.",
-      tech: "React, Node.js, MongoDB, Tailwind CSS",
-      link: "#",
+      title: "BookLot 4.0 Inventory System",
+      description: "A full-stack book management platform featuring a centralized Node.js server, React admin portal, and scalable MongoDB database schemas.",
+      tech: "React, Node.js, MongoDB, Express",
+      link: "https://github.com/john2772737/booklot-4.0",
     },
   ];
 
   return (
     <div id="projects" className="relative bg-transparent min-h-screen py-10 px-5 overflow-hidden">
-      {/* Animated Background Shapes */}
+      {/* Background shapes remain the same to maintain your theme */}
       <motion.div
         className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-tr from-purple-400 via-pink-500 to-red-500 clip-triangle opacity-20"
         animate={{ rotate: [0, 360] }}
@@ -41,7 +41,6 @@ function Projects() {
         Software Engineering Portfolio
       </h1>
 
-      {/* Grid layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {projects.map((project, index) => (
           <motion.div
@@ -59,14 +58,16 @@ function Projects() {
               <p className="text-gray-200 text-sm mb-4 leading-relaxed">
                 {project.description}
               </p>
-              <div className="text-xs font-mono text-pink-300 mb-6">
-                STACK: {project.tech}
+              <div className="text-xs font-mono text-pink-300 mb-6 uppercase tracking-wider">
+                Stack: {project.tech}
               </div>
               <a
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block w-full text-center px-4 py-2 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition"
               >
-                View Documentation
+                View Repository
               </a>
             </div>
           </motion.div>
